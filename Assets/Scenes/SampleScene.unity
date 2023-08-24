@@ -651,7 +651,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 1.2075
+  orthographic size: 0.9775
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1835,6 +1835,38 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1378508108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1330760633833075979, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+  m_PrefabInstance: {fileID: 1402939902155713469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1378508109
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378508108}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1466347791
 GameObject:
   m_ObjectHideFlags: 0
@@ -5424,11 +5456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4532975880294478440, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.729
       objectReference: {fileID: 0}
     - target: {fileID: 4532975880294478440, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.675
       objectReference: {fileID: 0}
     - target: {fileID: 4532975880294478440, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5466,11 +5498,26 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d9320fe9524e3d84090521f8f2e91570, type: 2}
+    - target: {fileID: 6585773395312018761, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      propertyPath: movementFilter.layerMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175554844492825890, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: bfcbf6ca3dc1f7a4b9fca2b203c3f2c6, type: 3}
+    - target: {fileID: 8175554844492825890, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1330760633833075979, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1378508109}
   m_SourcePrefab: {fileID: 100100000, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
