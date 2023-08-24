@@ -9,10 +9,10 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+    public Animator animator;
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
-    Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     // Start is called before the first frame update
