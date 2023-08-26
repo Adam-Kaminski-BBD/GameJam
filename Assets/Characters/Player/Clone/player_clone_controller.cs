@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class clone_controller : MonoBehaviour
+public class player_clone_controller : MonoBehaviour
 {
     public bool isMoving;
     public Animator animator;
