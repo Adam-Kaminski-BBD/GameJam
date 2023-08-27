@@ -55,19 +55,22 @@ public class Player_Replay : MonoBehaviour
     {
         if (loopTrigger)
         {
-            loopTrigger = false;
-            // Simulating a reset of the loop, progressing to next one
-            if(currentLoop == -1)
+            if(currentLoop + 1 < clones.Length)
             {
-                transform.position = new Vector3(0, 0, 0);
-                currentLoop++;
-            }
-            else
-            {
-                transform.position = new Vector3(0, 0, 0);
-                currentLoop++;
-                resetClones();
-            }
+                loopTrigger = false;
+                // Simulating a reset of the loop, progressing to next one
+                if (currentLoop == -1)
+                {
+                    transform.position = new Vector3(0, 0, 0);
+                    currentLoop++;
+                }
+                else
+                {
+                    transform.position = new Vector3(0, 0, 0);
+                    currentLoop++;
+                    resetClones();
+                }
+            }            
             //reset current frame every reset
             currentFrame = 0;
         }
