@@ -35,6 +35,7 @@ public class Player_Replay : MonoBehaviour
     // 5 clones, each with 1 replay list 
     private clone_data[] clones = new clone_data[2];
     private bool isMoving = true;
+    private bool loopTrigger = false;
 
     // Start is called before the first frame update
     void Start()
@@ -52,8 +53,9 @@ public class Player_Replay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (loopTrigger)
         {
+            loopTrigger = false;
             // Simulating a reset of the loop, progressing to next one
             if(currentLoop == -1)
             {
@@ -76,7 +78,6 @@ public class Player_Replay : MonoBehaviour
             //play and track
             for (int i = 0; i <= Math.Min(currentLoop, clones.Length - 1); i++)
             {
-                Debug.Log(i);
                 if (!clones[i].instance.activeSelf)
                 {
                     clones[i].instance.SetActive(true);
@@ -122,5 +123,11 @@ public class Player_Replay : MonoBehaviour
             clones[i].instance.SetActive(false);
             clones[i].instance.transform.position = new Vector3(0, 0, 0);
         }
+    }
+
+    public void TriggerEffect()
+    {
+        Debug.Log("Triggered by timer");
+        loopTrigger = true;
     }
 }
