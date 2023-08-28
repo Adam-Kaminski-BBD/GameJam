@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d9fb9299cc9e54db73e623e6d284ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2750171340466953502}
+  bulletSpeed: 5
 --- !u!120 &7534168219944729053
 LineRenderer:
   serializedVersion: 2
@@ -294,8 +296,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6196825091696451316, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1319467578193008261}
   m_SourcePrefab: {fileID: 100100000, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
+--- !u!1 &2750171340466953502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6196825091696451316, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
+  m_PrefabInstance: {fileID: 8346605891016279018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1319467578193008261
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750171340466953502}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &8532071549262108666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 413513178153571344, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
