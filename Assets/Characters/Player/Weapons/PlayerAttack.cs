@@ -75,13 +75,23 @@ public class PlayerAttack : MonoBehaviour
     {
         string bang = weaponController.getWeapon();
         Debug.Log(bang);
-        Debug.Log("%%%%%%%%%%%%%%%%%%%%%%");
-        Debug.Log(menuCanvas.activeSelf);
-        Debug.Log("^^^^^^^^^^^^^");
-
+        Debug.Log("bang");
+        GameObject bullet;
+        if (bang == "fire")
+        {
+            Debug.Log("fire is used");
+            bullet = Instantiate(firePrefab, transform.position, Quaternion.identity);
+        }
+        else if( bang == "pistol")
+        {
+            Debug.Log("bullet is used");
+            bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            return;
+        }
         // Create a new instance of the bullet at the player's position
-        //GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        GameObject bullet = Instantiate(firePrefab, transform.position, Quaternion.identity);
 
         // Calculate the direction from the player to the target position and normalize it
         Vector3 direction = (targetPosition - transform.position).normalized;

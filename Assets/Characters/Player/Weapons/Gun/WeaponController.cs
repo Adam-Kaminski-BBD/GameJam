@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     // Start is called before the first frame update
-    private string weapon = " ";
+    private string weapon;
 
     public string Weapon
     {
@@ -15,12 +15,15 @@ public class WeaponController : MonoBehaviour
         }
         set
         {
-            // You can add validation or logic here if needed
             weapon = value;
         }
     }
 
-    public void setWeapon(string weapon) => Weapon = weapon;
+    public void setWeapon(string weapon)
+    {
+        string sanitized = weapon.Replace("\"", "");
+        Weapon = sanitized;
+    }
 
     public string getWeapon()
     {
