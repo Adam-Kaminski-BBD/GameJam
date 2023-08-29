@@ -5,6 +5,10 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - bulletPrefab: {fileID: 6196825091696451316, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
+  - firePrefab: {fileID: 1866279441365327230, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
+  - menuController: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  - menuCanvas: {fileID: 5393724441950403576, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  - weaponController: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

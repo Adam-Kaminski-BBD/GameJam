@@ -372,6 +372,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4532975880294478440}
     m_Modifications:
+    - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: firePrefab
+      value: 
+      objectReference: {fileID: 1866279441365327230, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
+    - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: menuCanvas
+      value: 
+      objectReference: {fileID: 5393724441950403576, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+    - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: weaponController
+      value: 
+      objectReference: {fileID: 6875551496827713876, guid: f2bf6615a28599847a3709291b778723, type: 3}
+    - target: {fileID: 2888653352719400719, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888653352719400719, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301896202114860811, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5554029853053966844, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.012

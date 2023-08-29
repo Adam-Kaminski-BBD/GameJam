@@ -121,6 +121,7 @@ public class Player_Replay : MonoBehaviour
     
     private void resetClones()
     {
+
         for (int i = 0; i < clones.Length; i++)
         {
             clones[i].instance.SetActive(false);
