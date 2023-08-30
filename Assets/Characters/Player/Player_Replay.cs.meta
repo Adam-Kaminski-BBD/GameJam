@@ -3,7 +3,9 @@ guid: ca4597b923d0e4e449962f1349545c02
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player_clone: {instanceID: 0}
+  - menuController: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     public Text timeText;
     public GameObject targetPrefab;
 
+    public MenuController menuController;
+
     private void Start()
     {
         StartTimer();
@@ -47,6 +49,7 @@ public class Timer : MonoBehaviour
     {
         isTimerRunning = true;
         Debug.Log("Timer reset");
+        menuController.ShowMenu();
     }
 
     public void ResetTimer()

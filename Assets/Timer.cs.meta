@@ -3,7 +3,10 @@ guid: d430954ecef40ac40a794156198d7567
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - timeText: {instanceID: 0}
+  - targetPrefab: {instanceID: 0}
+  - menuController: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
