@@ -22,6 +22,12 @@ public class EnemyDamage : MonoBehaviour
             Debug.Log("Taken damage");
             TakeDamage(5);
         }
+        if(col.gameObject.tag == "Wall")
+        {
+            //collide with wall
+            
+            
+        }
     }
 
     void TakeDamage(int damage)

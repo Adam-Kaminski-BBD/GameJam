@@ -28,13 +28,13 @@ public class PlayerAttack : MonoBehaviour
     {
         Vector2 playerPosition = transform.position;
         string isWall = weaponController.getWeapon();
-        if(isWall != "wall")
-        {
-            removeWall();
-        }
-        else if (isWall == "wall")
+        if (isWall == "wall")
         {
             placeWall();
+        }
+        else
+        {
+            removeWall();
         }
         if (Input.GetMouseButtonDown(0))
         {
