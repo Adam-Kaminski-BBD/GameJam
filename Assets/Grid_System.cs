@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Grid_System : MonoBehaviour
 {
-    public Vector2 gridSize = new Vector2(10, 10); // Number of rows and columns in the grid
-    public Vector2 cellSize = new Vector2(1, 1);   // Size of each grid cell
+    public Vector2 gridSize = new Vector2(24, 13.5f); // Number of rows and columns in the grid
+    public Vector2 cellSize = new Vector2(.16f, .16f);   // Size of each grid cell
 
     public GameObject itemPrefab; // Prefab to be placed
     public GameObject itemPreviewPrefab; // Prefab for the preview
@@ -13,6 +13,8 @@ public class Grid_System : MonoBehaviour
     private int numColumns;
     private int numRows;
     private int rotationSteps = 0; // Current rotation angle
+
+    public bool isOn = false;
 
     void Start()
     {
@@ -23,38 +25,52 @@ public class Grid_System : MonoBehaviour
 
     void Update()
     {
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition.z = Camera.main.transform.position.y;
-
-        Vector2 gridIndex = WorldToGrid(Camera.main.ScreenToWorldPoint(mousePosition));
-
-        if (itemPreview == null)
+        if (isOn)
         {
-            itemPreview = Instantiate(itemPreviewPrefab); // Instantiate the preview
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = Camera.main.transform.position.y;
+
+            Vector2 gridIndex = WorldToGrid(Camera.main.ScreenToWorldPoint(mousePosition));
+
+            if (itemPreview == null)
+            {
+                itemPreview = Instantiate(itemPreviewPrefab); // Instantiate the preview
+            }
+
+            Vector3 previewPosition = GridToWorld(new Vector2(gridIndex.x, gridIndex.y));
+            itemPreview.transform.position = previewPosition;
+
+            // Rotate the preview sprite by 90 degrees on each scroll step
+            float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+            if (scrollInput != 0f)
+            {
+                rotationSteps += (int)Mathf.Sign(scrollInput);
+                float rotationAngle = rotationSteps * 45f;
+                itemPreview.transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("Place wall brudda");
+                // Place the item with the same rotation as the preview
+                float finalRotation = rotationSteps * 45f;
+                GameObject placedItem = Instantiate(itemPrefab, previewPosition, Quaternion.Euler(0f, 0f, finalRotation));
+                Destroy(itemPreview); // Remove the preview when placing the item
+
+                // Reset rotation steps
+                rotationSteps = 0;
+            }
         }
+    }
 
-        Vector3 previewPosition = GridToWorld(new Vector2(gridIndex.x, gridIndex.y));
-        itemPreview.transform.position = previewPosition;
-
-        // Rotate the preview sprite by 90 degrees on each scroll step
-        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-        if (scrollInput != 0f)
-        {
-            rotationSteps += (int)Mathf.Sign(scrollInput);
-            float rotationAngle = rotationSteps *45f;
-            itemPreview.transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Place the item with the same rotation as the preview
-            float finalRotation = rotationSteps * 45f;
-            GameObject placedItem = Instantiate(itemPrefab, previewPosition, Quaternion.Euler(0f, 0f, finalRotation));
-            Destroy(itemPreview); // Remove the preview when placing the item
-
-            // Reset rotation steps
-            rotationSteps = 0;
-        }
+    public void setOff()
+    {
+        isOn = false;
+    }
+    
+    public void setOn()
+    {
+        isOn = true;
     }
 
     public Vector2 WorldToGrid(Vector3 worldPosition)

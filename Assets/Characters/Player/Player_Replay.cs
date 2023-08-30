@@ -22,6 +22,10 @@ using UnityEngine;
  */
 
 
+/*
+ * Now we want to track bullets 
+ */
+
 public class Player_Replay : MonoBehaviour
 {
 
@@ -36,6 +40,12 @@ public class Player_Replay : MonoBehaviour
     private clone_data[] clones = new clone_data[2];
     private bool isMoving = true;
     private bool loopTrigger = false;
+
+    //bullet
+    public GameObject bulletPrefab;
+    public GameObject firePrefab;
+    public float bulletSpeed = 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001f;
+    public WeaponController weaponController;
 
     // Start is called before the first frame update
     void Start()
@@ -94,7 +104,10 @@ public class Player_Replay : MonoBehaviour
     {
         if (currentLoop+1 < clones.Length) 
         {
-            clones[currentLoop+1].frames.Add(new ReplayActions { position = transform.position, rotation = transform.rotation, isMoving = true });
+            clones[currentLoop+1].frames.Add(new ReplayActions { 
+                position = transform.position, 
+                rotation = transform.rotation, 
+                isMoving = true});
         }
         if (currentLoop != -1)
         {
@@ -133,5 +146,24 @@ public class Player_Replay : MonoBehaviour
     {
         Debug.Log("Triggered by timer");
         loopTrigger = true;
+    }
+
+    //used to shoot bullet based on the target position saved.
+    void FireBullet(Vector2 targetPosition)
+    {
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+
+        bullet.transform.rotation = RotateProjectile(direction);
+
+        bullet.SetActive(true);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.velocity = direction * 1f;
+        Destroy(bullet, 5f);
+    }
+    Quaternion RotateProjectile(Vector2 dir)
+    {
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        return Quaternion.Euler(0, 0, angle);
     }
 }
