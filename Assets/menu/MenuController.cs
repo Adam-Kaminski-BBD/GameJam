@@ -23,9 +23,15 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        Debug.Log("this is shown now and can use a reset or something");
+    }
+
     // Show the menu
     public void ShowMenu()
     {
+        weaponController.setWeapon(" ");
         testing = true;
         menuCanvas.SetActive(true);
         Time.timeScale = 0; // Pause the game

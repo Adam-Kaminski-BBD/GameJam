@@ -384,6 +384,10 @@ PrefabInstance:
       propertyPath: weaponController
       value: 
       objectReference: {fileID: 6875551496827713876, guid: f2bf6615a28599847a3709291b778723, type: 3}
+    - target: {fileID: 2750171340466953502, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2888653352719400719, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -392,6 +396,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4034172120783877309, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: bulletAnimation
+      value: 
+      objectReference: {fileID: -816645413881191553, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
     - target: {fileID: 5301896202114860811, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: m_IsActive
       value: 0
