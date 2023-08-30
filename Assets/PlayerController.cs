@@ -38,6 +38,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            TakeDamage(1);
+        }
+    }
+
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
