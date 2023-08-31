@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     public GameObject targetPrefab;
 
     public MenuController menuController;
+    public GameOverScreen gameOverScreen;
 
     private void Start()
     {
@@ -37,10 +38,13 @@ public class Timer : MonoBehaviour
                     // There should be a pause and another countdown so that the player can understand whats going on.
                     effectScript.TriggerEffect();
                     ResetTimer();
-                    StartTimer();
+                    if (!gameOverScreen.gameOver)
+                    {
+                        StartTimer();
+                    }
                 }
-                
-                
+
+
             }
         }
     }
