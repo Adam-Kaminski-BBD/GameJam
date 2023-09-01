@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
     private LineRenderer lineRenderer;
     public GameObject bulletPrefab;
     public GameObject firePrefab;
-    public float bulletSpeed = 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001f;
+    public GameObject slimePrefab;
 
     public MenuController menuController;
     public GameObject menuCanvas;
@@ -65,13 +65,12 @@ public class PlayerAttack : MonoBehaviour
                 break;
 
             case "slime":
-                
+                GooiSlime(targetPosition);
                 Debug.Log("Slime attack");
                 break;
 
             case "wall":
                 placeWall();
-                // there is a controller script for wall placing, it can be toggled on here
                 Debug.Log("Wall attack");
                 break;
 
@@ -130,4 +129,24 @@ public class PlayerAttack : MonoBehaviour
     {
         gridController.GetComponent<Grid_System>().setOff();
     }
-}
+
+    void GooiSlime(Vector2 targetPosition)
+    {
+        GameObject slime = Instantiate(slimePrefab, targetPosition, Quaternion.identity);
+
+        // Calculate the direction from the player to the click position
+        Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+
+        // Calculate the rotation angle
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        slime.transform.rotation = Quaternion.Euler(0, 0, angle+90f);
+
+        // Apply an initial force to the slime to make it move
+        Rigidbody2D rb = slime.GetComponent<Rigidbody2D>();
+
+        slime.SetActive(true);
+
+        Destroy(slime, 5f);
+
+    }
+}   
