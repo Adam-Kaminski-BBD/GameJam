@@ -79,6 +79,9 @@ public class PlayerController : MonoBehaviour
         }else if(movementInput.x > 0){
             spriteRenderer.flipX = false;
         }
+
+           // Clamp the player's position
+           ClampPosition();
         
     }
 
@@ -103,5 +106,20 @@ public class PlayerController : MonoBehaviour
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
+    }
+
+    private void ClampPosition()
+    {
+        Vector3 newPosition = transform.position;
+
+        // Get the screen boundaries in world coordinates
+        Vector3 minBounds = Camera.main.ScreenToWorldPoint(Vector3.zero);
+        Vector3 maxBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height));
+
+        // Clamp the player's position within the screen boundaries
+        newPosition.x = Mathf.Clamp(newPosition.x, minBounds.x, maxBounds.x);
+        newPosition.y = Mathf.Clamp(newPosition.y, minBounds.y, maxBounds.y);
+
+        transform.position = newPosition;
     }
 }
