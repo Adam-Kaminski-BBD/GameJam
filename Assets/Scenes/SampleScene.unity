@@ -1511,7 +1511,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 1.2475
+  orthographic size: 1.085
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2270,14 +2270,6 @@ PrefabInstance:
     - target: {fileID: 6478979866434527028, guid: 11ce42ee1a4af8b4684e14219096e549, type: 3}
       propertyPath: m_Name
       value: Wave Spawner (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8504724337429904690, guid: 11ce42ee1a4af8b4684e14219096e549, type: 3}
-      propertyPath: enemyPrefab
-      value: 
-      objectReference: {fileID: 6021491816800976204, guid: 85621cc3c0b204e45aa3c71c95dd4318, type: 3}
-    - target: {fileID: 8504724337429904690, guid: 11ce42ee1a4af8b4684e14219096e549, type: 3}
-      propertyPath: numberOfEnemies
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3276,7 +3268,7 @@ Tilemap:
       - {fileID: -541444413, guid: 3c9dfa8c0df9bc2418d18516f50642fb, type: 3}
       - {fileID: -249716913, guid: 3c9dfa8c0df9bc2418d18516f50642fb, type: 3}
       - {fileID: -1361601589, guid: 3c9dfa8c0df9bc2418d18516f50642fb, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -8044,6 +8036,10 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: 6021491816800976204, guid: 85621cc3c0b204e45aa3c71c95dd4318, type: 3}
+    - target: {fileID: 8504724337429904690, guid: 11ce42ee1a4af8b4684e14219096e549, type: 3}
+      propertyPath: numberOfEnemies
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
