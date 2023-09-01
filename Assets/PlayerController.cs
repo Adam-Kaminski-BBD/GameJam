@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+    public GameOverScreen GameOverScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,13 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+    }
+
+    void Update() 
+    {
+        if(currentHealth == 0) {
+            GameOverScreen.Setup();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
