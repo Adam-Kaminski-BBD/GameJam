@@ -45,6 +45,11 @@ public class MenuController : MonoBehaviour
         Time.timeScale = 1; // Resume the game
     }
 
+    public void Disable()
+    {
+        menuCanvas.SetActive(false);
+    }
+
     public bool menuIsActive()
     {
         return testing;
