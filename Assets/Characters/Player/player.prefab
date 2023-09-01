@@ -364,6 +364,128 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_clone: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  firePrefab: {fileID: 0}
+  bulletSpeed: 0
+  weaponController: {fileID: 0}
+--- !u!1001 &678853645462517123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6244142974136227253}
+    m_Modifications:
+    - target: {fileID: 434258025152130361, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_Name
+      value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 434258025152130361, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434258025152130361, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434258025152130361, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_TagString
+      value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.080000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.040000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0096
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.022400001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9057855746082124193, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 434258025152130361, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7071022060905843871}
+  m_SourcePrefab: {fileID: 100100000, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+--- !u!1 &1111560714973845690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 434258025152130361, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+  m_PrefabInstance: {fileID: 678853645462517123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &7071022060905843871
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111560714973845690}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!4 &8728127856111310613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8091648848431243926, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
+  m_PrefabInstance: {fileID: 678853645462517123}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1996297819330595913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -380,6 +502,10 @@ PrefabInstance:
       propertyPath: menuCanvas
       value: 
       objectReference: {fileID: 5393724441950403576, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+    - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: slimePrefab
+      value: 
+      objectReference: {fileID: 1111560714973845690}
     - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: weaponController
       value: 
@@ -462,7 +588,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5554029853053966844, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 8728127856111310613}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
 --- !u!4 &6244142974136227253 stripped

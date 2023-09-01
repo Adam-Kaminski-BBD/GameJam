@@ -8,6 +8,8 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform player;
 
+    public ContactFilter2D movementFilter;
+
     void Start()
     {
         StartCoroutine(UpdateClosestPlayer());
@@ -45,6 +47,14 @@ public class EnemyMovement : MonoBehaviour
             Vector2 direction = (player.position - transform.position).normalized;
             Vector2 movement = direction * speed * Time.deltaTime;
             transform.Translate(movement);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Slime")
+        {
+            speed = 0.2f;
         }
     }
 }
