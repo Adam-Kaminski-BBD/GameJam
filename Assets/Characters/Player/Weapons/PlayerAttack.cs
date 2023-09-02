@@ -60,19 +60,21 @@ public class PlayerAttack : MonoBehaviour
 
     void HandleAttack(Vector2 targetPosition)
     {
-        removeWall();
         string bang = weaponController.getWeapon();
         switch (bang)
         { 
-            case "fire":               
+            case "fire":
+                removeWall();
                 SprayFire(targetPosition);
                 break;
 
-            case "pistol":                
+            case "pistol":
+                removeWall();
                 FireBullet(targetPosition);
                 break;
 
             case "slime":
+                removeWall();
                 GooiSlime(targetPosition);
                 break;
 
@@ -81,6 +83,7 @@ public class PlayerAttack : MonoBehaviour
                 break;
 
             default:
+                removeWall();
                 Debug.Log("NOT FIRE OR PISTOL");
                 return;
         }

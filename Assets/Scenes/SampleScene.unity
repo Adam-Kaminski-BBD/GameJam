@@ -4279,7 +4279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d430954ecef40ac40a794156198d7567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerLength: 100
+  timerLength: 5
   timeText: {fileID: 2007471033}
   targetPrefab: {fileID: 1786066951}
   menuController: {fileID: 1218847680}
