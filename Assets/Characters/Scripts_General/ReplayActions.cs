@@ -9,4 +9,9 @@ public class ReplayActions
     public Quaternion rotation;
 
     public bool isMoving;
+    
+    public Vector2 weaponPosition;
+    public Quaternion itemRotation;
+    public string currentWeapon;
+    public bool clicked;
 }

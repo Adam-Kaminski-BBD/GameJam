@@ -142,7 +142,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: pistol
+          m_StringArgument: '"pistol"'
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1969408934144478744
@@ -290,6 +290,18 @@ MonoBehaviour:
           m_StringArgument: slime
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WeaponController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3181324066134015934
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pick a tool below and give the baddies a "GG EEEEEZ"
+  m_text: Pick an item to use for the next loop!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27b457c1c46644541ab77d4ee7cdff5c, type: 2}
   m_sharedMaterial: {fileID: 376760944510762476, guid: 27b457c1c46644541ab77d4ee7cdff5c, type: 2}
@@ -463,7 +475,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -794,7 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -837,6 +849,7 @@ MonoBehaviour:
   menuCanvas: {fileID: 5393724441950403576}
   test: 2
   weaponController: {fileID: 0}
+  isActive: 1
 --- !u!1 &6491378276401844140
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.79607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

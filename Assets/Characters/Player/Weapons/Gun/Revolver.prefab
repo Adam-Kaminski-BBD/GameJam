@@ -102,13 +102,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d9fb9299cc9e54db73e623e6d284ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastPositionShot: {x: 0, y: 0}
   bulletPrefab: {fileID: 2750171340466953502}
   firePrefab: {fileID: 0}
-  bulletSpeed: 5
+  slimePrefab: {fileID: 0}
   menuController: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
   menuCanvas: {fileID: 0}
-  currentWeapon: ' '
+  bulletAnimator: {fileID: 0}
   weaponController: {fileID: 0}
+  gridController: {fileID: 0}
+  wallPreview: {fileID: 0}
+  currentWeapon: ' '
 --- !u!120 &7534168219944729053
 LineRenderer:
   serializedVersion: 2
@@ -259,30 +263,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire
       objectReference: {fileID: 0}
-    - target: {fileID: 1866279441365327230, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4199410820214899559, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
-      propertyPath: m_Mass
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4199410820214899559, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4199410820214899559, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8675282162014610810, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8675282162014610810, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8675282162014610810, guid: 96e1d31a87e7c17419541cf23bed6e59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -385,50 +365,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet
       objectReference: {fileID: 0}
-    - target: {fileID: 6196825091696451316, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6196825091696451316, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1319467578193008261}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
 --- !u!1 &2750171340466953502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6196825091696451316, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}
   m_PrefabInstance: {fileID: 8346605891016279018}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1319467578193008261
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2750171340466953502}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &8532071549262108666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 413513178153571344, guid: ed59ddddf61aea74da427dcce73cd9c3, type: 3}

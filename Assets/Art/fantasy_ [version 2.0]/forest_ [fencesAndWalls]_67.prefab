@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1219795955002245562}
   m_Layer: 0
   m_Name: forest_ [fencesAndWalls]_67
-  m_TagString: Wall
+  m_TagString: Wall_Placed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
