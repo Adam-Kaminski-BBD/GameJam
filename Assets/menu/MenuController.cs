@@ -9,6 +9,7 @@ public class MenuController : MonoBehaviour
     public WeaponController weaponController;
     //public bool testing = true;
     private bool testing = true;
+    public bool isActive = true;
 
     public bool Testing
     {
@@ -41,6 +42,7 @@ public class MenuController : MonoBehaviour
     public void HideMenu()
     {
         testing = false;
+        isActive = false;
         menuCanvas.SetActive(false);
         Time.timeScale = 1; // Resume the game
     }

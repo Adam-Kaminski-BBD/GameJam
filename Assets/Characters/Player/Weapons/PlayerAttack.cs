@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject firePrefab;
     public GameObject slimePrefab;
 
-    public MenuController menuController;
+    private MenuController menuController;
     public GameObject menuCanvas;
     private bool menuShown = true;
 
@@ -28,11 +28,12 @@ public class PlayerAttack : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
         replay = GetComponentInParent<Player_Replay>();
+        menuController = menuCanvas.GetComponent<MenuController>();
     }
 
     void Update()
     {
-        menuShown = menuCanvas.activeSelf;
+        menuShown = menuController.isActive;
         Vector2 playerPosition = transform.position;
         //bad code ik, but we don't need to refactor for a gamejam
         currentWeapon = weaponController.getWeapon();
