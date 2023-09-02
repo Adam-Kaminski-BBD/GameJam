@@ -374,10 +374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_clone: {fileID: 2715338118445146549, guid: 06eeeedd03709d14d8404ab2e200d640, type: 3}
-  bulletPrefab: {fileID: 0}
-  firePrefab: {fileID: 0}
-  bulletSpeed: 0
-  weaponController: {fileID: 0}
 --- !u!1001 &678853645462517123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,12 +557,24 @@ PrefabInstance:
       value: Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 5554029853053966844, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554029853053966844, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554029853053966844, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554029853053966844, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.012
       objectReference: {fileID: 0}
     - target: {fileID: 5554029853053966844, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.028
+      value: -0.0548
       objectReference: {fileID: 0}
     - target: {fileID: 5554029853053966844, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: m_LocalPosition.z
