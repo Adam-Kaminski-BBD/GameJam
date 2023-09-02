@@ -18,16 +18,22 @@ public class PlayerAttack : MonoBehaviour
 
     public GameObject gridController;
     public GameObject wallPreview;
+    public string currentWeapon;
+
+    private Player_Replay replay;
 
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
+        replay = GetComponentInParent<Player_Replay>();
     }
 
     void Update()
     {
         Vector2 playerPosition = transform.position;
+        //bad code ik, but we don't need to refactor for a gamejam
+        currentWeapon = weaponController.getWeapon();
         string isWall = weaponController.getWeapon();
         if (isWall == "wall")
         {
@@ -44,8 +50,9 @@ public class PlayerAttack : MonoBehaviour
             lastPositionShot = mouseClickPosWorld;
             GetSetDistance(playerPosition, mouseClickPosWorld);
             HandleAttack(mouseClickPosWorld);
+            replay.triggerClick();
         }
-        lastPositionShot = new Vector2(0,0);
+        
     }
 
     void HandleAttack(Vector2 targetPosition)
@@ -54,29 +61,23 @@ public class PlayerAttack : MonoBehaviour
         string bang = weaponController.getWeapon();
         switch (bang)
         { 
-            case "fire":
-                Debug.Log("fire attack");
-               
+            case "fire":               
                 SprayFire(targetPosition);
                 break;
 
-            case "pistol":
-                
+            case "pistol":                
                 FireBullet(targetPosition);
                 break;
 
             case "slime":
                 GooiSlime(targetPosition);
-                Debug.Log("Slime attack");
                 break;
 
             case "wall":
                 placeWall();
-                Debug.Log("Wall attack");
                 break;
 
             default:
-                
                 Debug.Log("NOT FIRE OR PISTOL");
                 return;
         }

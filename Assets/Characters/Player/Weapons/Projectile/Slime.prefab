@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 5702034121285898145}
   - component: {fileID: 418312182747474024}
   - component: {fileID: 8040692655388417715}
-  - component: {fileID: 9057855746082124193}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,15 +158,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9057855746082124193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434258025152130361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40fae7c2c90167f4fb194bb79f050fd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

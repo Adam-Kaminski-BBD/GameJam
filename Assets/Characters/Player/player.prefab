@@ -218,6 +218,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -305,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  collisionOffset: 0.05
+  collisionOffset: 0
   movementFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -320,7 +329,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  animator: {fileID: 0}
+  animator: {fileID: 4558123684586382660}
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
@@ -364,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4597b923d0e4e449962f1349545c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_clone: {fileID: 0}
+  player_clone: {fileID: 2715338118445146549, guid: 06eeeedd03709d14d8404ab2e200d640, type: 3}
   bulletPrefab: {fileID: 0}
   firePrefab: {fileID: 0}
   bulletSpeed: 0
@@ -510,11 +519,11 @@ PrefabInstance:
     - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: wallPreview
       value: 
-      objectReference: {fileID: 5527607967657888628, guid: b2ccc8e43fa05b140b6750c7097830c4, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: gridController
       value: 
-      objectReference: {fileID: 4563739426379183155, guid: 9a32cc94750f38145a53222ab1e3cbcf, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: weaponController
       value: 
