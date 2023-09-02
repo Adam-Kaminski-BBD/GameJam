@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
 
     public MenuController menuController;
     public GameObject menuCanvas;
+    private bool menuShown = true;
 
     public Animator bulletAnimator;
 
@@ -31,6 +32,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        menuShown = menuCanvas.activeSelf;
         Vector2 playerPosition = transform.position;
         //bad code ik, but we don't need to refactor for a gamejam
         currentWeapon = weaponController.getWeapon();
@@ -43,7 +45,7 @@ public class PlayerAttack : MonoBehaviour
         {
             removeWall();
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !menuShown)
         {
             Vector2 mouseClickPosScreen = Input.mousePosition;
             Vector2 mouseClickPosWorld = Camera.main.ScreenToWorldPoint(mouseClickPosScreen);
