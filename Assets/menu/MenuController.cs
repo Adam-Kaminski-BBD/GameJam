@@ -56,4 +56,9 @@ public class MenuController : MonoBehaviour
     {
         return testing;
     }
+
+    public void toolTip()
+    {
+
+    }
 }

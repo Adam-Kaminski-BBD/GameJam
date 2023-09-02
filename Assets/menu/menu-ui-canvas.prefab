@@ -290,7 +290,7 @@ MonoBehaviour:
           m_StringArgument: slime
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5393724441950403576}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WeaponController, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pick a tool below and give the baddies a "GG EEEEEZ"
+  m_text: Pick an item to use for the next loop!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27b457c1c46644541ab77d4ee7cdff5c, type: 2}
   m_sharedMaterial: {fileID: 376760944510762476, guid: 27b457c1c46644541ab77d4ee7cdff5c, type: 2}
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.79607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
