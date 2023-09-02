@@ -225,6 +225,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &79454381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6636880997925240206, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &79454386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79454381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: ShowTooltip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: HideTooltip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &168175817
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +446,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254756078}
   m_CullTransparentMesh: 1
+--- !u!1 &271927376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1969408934144478744, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &271927381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271927376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: ShowTooltip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: HideTooltip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &287126365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1412,56 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &396389478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4754999004793091955, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &396389483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396389478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: ShowTooltip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: HideTooltip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &397907178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,7 +1757,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 1.2925
+  orthographic size: 1.19
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2005,6 +2155,56 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11ce42ee1a4af8b4684e14219096e549, type: 3}
+--- !u!1 &685353624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 668461894805215167, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &685353629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685353624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: ShowTooltip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: HideTooltip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &711020398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7991,6 +8191,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6585773395312018761, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 6653049447991060927, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+    - target: {fileID: 6585773395312018761, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 287126367}
@@ -8069,6 +8273,94 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87e6dc51b5f9144478928942b78b1ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &3025884578921190310
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3966675656727021767, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: tooltips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966675656727021767, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: tooltips.Array.data[0]
+      value: 
+      objectReference: {fileID: 5025804025689696034, guid: 04206e2ab3ffd484fa5e4c2d378ae643, type: 3}
+    - target: {fileID: 3966675656727021767, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: tooltips.Array.data[1]
+      value: 
+      objectReference: {fileID: 5025804025689696034, guid: e8cf12deb7ddf1d43a2d82f7d96e08a5, type: 3}
+    - target: {fileID: 3966675656727021767, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: tooltips.Array.data[2]
+      value: 
+      objectReference: {fileID: 5025804025689696034, guid: 2c714dec083944648bdb959c57be103a, type: 3}
+    - target: {fileID: 3966675656727021767, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: tooltips.Array.data[3]
+      value: 
+      objectReference: {fileID: 5025804025689696034, guid: ff85e18d01c170c40b1bd12a6f7d3fec, type: 3}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.040933575
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.026698308
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.987427
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046479929843467886, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_Name
+      value: ToolTipManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+--- !u!114 &3025884578921190311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3966675656727021767, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+  m_PrefabInstance: {fileID: 3025884578921190310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3073b6950ab92941976aff460b7e0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8672808216901806899
@@ -8159,13 +8451,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 3025884578921190311}
+    - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HideTooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TooltipManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: weaponController
       value: 
       objectReference: {fileID: 2329079455997349025}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 3025884578921190311}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HideTooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TooltipManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -8173,7 +8521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8186,7 +8534,7 @@ PrefabInstance:
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 6875551496827713876, guid: f2bf6615a28599847a3709291b778723, type: 3}
+      objectReference: {fileID: 3025884578921190311}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideMenu
@@ -8197,7 +8545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: setWeapon
+      value: HideTooltip
       objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -8208,12 +8556,16 @@ PrefabInstance:
       value: WeaponController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TooltipManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: slime
       objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: slime
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -8227,10 +8579,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: menu-ui-canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 3025884578921190311}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HideTooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TooltipManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1969408934144478744, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 271927381}
+    - targetCorrespondingSourceObject: {fileID: 6636880997925240206, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 79454386}
+    - targetCorrespondingSourceObject: {fileID: 668461894805215167, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685353629}
+    - targetCorrespondingSourceObject: {fileID: 4754999004793091955, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 396389483}
   m_SourcePrefab: {fileID: 100100000, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
 --- !u!1001 &8892699869175703480
 PrefabInstance:
@@ -8323,3 +8715,4 @@ SceneRoots:
   - {fileID: 8672808216901806899}
   - {fileID: 2114585920}
   - {fileID: 568784594}
+  - {fileID: 3025884578921190310}
