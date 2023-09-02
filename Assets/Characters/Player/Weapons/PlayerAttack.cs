@@ -17,6 +17,7 @@ public class PlayerAttack : MonoBehaviour
     public WeaponController weaponController;
 
     public GameObject gridController;
+    public GameObject wallPreview;
 
     void Start()
     {
@@ -123,11 +124,12 @@ public class PlayerAttack : MonoBehaviour
     void placeWall()
     {
         gridController.GetComponent<Grid_System>().setOn();
-        Debug.Log(gridController.GetComponent<Grid_System>().isOn.ToString());
+        wallPreview.GetComponent<PlacementAreaIndicator>().enable();
     }
     void removeWall()
     {
         gridController.GetComponent<Grid_System>().setOff();
+        wallPreview.GetComponent<PlacementAreaIndicator>().disable();
     }
 
     void GooiSlime(Vector2 targetPosition)

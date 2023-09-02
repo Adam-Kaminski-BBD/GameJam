@@ -324,6 +324,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  GameOverScreen: {fileID: 0}
 --- !u!50 &9103744882847113139
 Rigidbody2D:
   serializedVersion: 4
@@ -506,6 +507,14 @@ PrefabInstance:
       propertyPath: slimePrefab
       value: 
       objectReference: {fileID: 1111560714973845690}
+    - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: wallPreview
+      value: 
+      objectReference: {fileID: 5527607967657888628, guid: b2ccc8e43fa05b140b6750c7097830c4, type: 3}
+    - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
+      propertyPath: gridController
+      value: 
+      objectReference: {fileID: 4563739426379183155, guid: 9a32cc94750f38145a53222ab1e3cbcf, type: 3}
     - target: {fileID: 2689457585182288087, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
       propertyPath: weaponController
       value: 

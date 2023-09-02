@@ -48,3 +48,5 @@ MonoBehaviour:
   cellSize: {x: 0.16, y: 0.16}
   itemPrefab: {fileID: 2147690164874249932, guid: de47148c7e928614b87ff5b170790e0b, type: 3}
   itemPreviewPrefab: {fileID: 2147690164874249932, guid: de47148c7e928614b87ff5b170790e0b, type: 3}
+  isOn: 0
+  placementRadius: 5

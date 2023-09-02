@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class Grid_System : MonoBehaviour
 {
-    public Vector2 gridSize = new Vector2(24, 13.5f); // Number of rows and columns in the grid
-    public Vector2 cellSize = new Vector2(.16f, .16f);   // Size of each grid cell
-
-    public GameObject itemPrefab; // Prefab to be placed
-    public GameObject itemPreviewPrefab; // Prefab for the preview
-    private GameObject itemPreview; // Reference to the preview GameObject
+    public Vector2 gridSize = new Vector2(24, 13.5f);
+    public Vector2 cellSize = new Vector2(.16f, .16f);
+    public GameObject itemPrefab;
+    public GameObject itemPreviewPrefab;
+    private GameObject itemPreview;
     private int numColumns;
     private int numRows;
-    private int rotationSteps = 0; // Current rotation angle
+    private int rotationSteps = 0;
 
     public bool isOn = false;
 
+    public float placementRadius = 5f; // Radius around the player for placement
+
+    private Transform playerTransform; // Reference to the player's transform
+
     void Start()
     {
-        // Initialize missing variables
         numColumns = (int)gridSize.x;
         numRows = (int)gridSize.y;
+
+        // Find the player's transform using a tag or other method
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
@@ -29,36 +34,42 @@ public class Grid_System : MonoBehaviour
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = Camera.main.transform.position.y;
-
             Vector2 gridIndex = WorldToGrid(Camera.main.ScreenToWorldPoint(mousePosition));
 
             if (itemPreview == null)
             {
-                itemPreview = Instantiate(itemPreviewPrefab); // Instantiate the preview
+                itemPreview = Instantiate(itemPreviewPrefab);
             }
 
             Vector3 previewPosition = GridToWorld(new Vector2(gridIndex.x, gridIndex.y));
-            itemPreview.transform.position = previewPosition;
 
-            // Rotate the preview sprite by 90 degrees on each scroll step
-            float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-            if (scrollInput != 0f)
+            // Check the distance between the player and the placement position
+            float distanceToPlayer = Vector3.Distance(playerTransform.position, previewPosition);
+            if (distanceToPlayer <= placementRadius)
             {
-                rotationSteps += (int)Mathf.Sign(scrollInput);
-                float rotationAngle = rotationSteps * 45f;
-                itemPreview.transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+                itemPreview.transform.position = previewPosition;
+
+                float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+                if (scrollInput != 0f)
+                {
+                    rotationSteps += (int)Mathf.Sign(scrollInput);
+                    float rotationAngle = rotationSteps * 45f;
+                    itemPreview.transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+                }
+
+                if (Input.GetMouseButtonDown(0) && distanceToPlayer <= placementRadius)
+                {
+                    Debug.Log("Place wall brudda");
+                    float finalRotation = rotationSteps * 45f;
+                    GameObject placedItem = Instantiate(itemPrefab, previewPosition, Quaternion.Euler(0f, 0f, finalRotation));
+                    Destroy(itemPreview);
+                    rotationSteps = 0;
+                }
             }
-
-            if (Input.GetMouseButtonDown(0))
+            else
             {
-                Debug.Log("Place wall brudda");
-                // Place the item with the same rotation as the preview
-                float finalRotation = rotationSteps * 45f;
-                GameObject placedItem = Instantiate(itemPrefab, previewPosition, Quaternion.Euler(0f, 0f, finalRotation));
-                Destroy(itemPreview); // Remove the preview when placing the item
-
-                // Reset rotation steps
-                rotationSteps = 0;
+                // Hide the item preview if it's outside the placement radius
+                Destroy(itemPreview);
             }
         }
     }
@@ -67,7 +78,7 @@ public class Grid_System : MonoBehaviour
     {
         isOn = false;
     }
-    
+
     public void setOn()
     {
         isOn = true;
