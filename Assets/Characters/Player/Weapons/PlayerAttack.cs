@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    //sounds
+    public AudioSource ShootPistol;
+    public AudioSource ShootFire;
+    public AudioSource ShootSlime;
+    public AudioSource ShootWall;
+
     public Vector2 lastPositionShot;
     private LineRenderer lineRenderer;
     public GameObject bulletPrefab;
@@ -66,20 +72,24 @@ public class PlayerAttack : MonoBehaviour
             case "fire":
                 removeWall();
                 SprayFire(targetPosition);
+                ShootFire.Play();
                 break;
 
             case "pistol":
                 removeWall();
                 FireBullet(targetPosition);
+                ShootPistol.Play();
                 break;
 
             case "slime":
                 removeWall();
                 GooiSlime(targetPosition);
+                ShootSlime.Play();
                 break;
 
             case "wall":
                 placeWall();
+                ShootWall.Play();
                 break;
 
             default:
