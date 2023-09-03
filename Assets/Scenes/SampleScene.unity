@@ -4289,6 +4289,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1330760633833075979, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
   m_PrefabInstance: {fileID: 1402939902155713469}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1786066957 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4558123684586382660, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+  m_PrefabInstance: {fileID: 1402939902155713469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2007471027
 GameObject:
   m_ObjectHideFlags: 0
@@ -8190,6 +8195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5378900467635392599, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1786066957}
     - target: {fileID: 6585773395312018761, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: gun
       value: 

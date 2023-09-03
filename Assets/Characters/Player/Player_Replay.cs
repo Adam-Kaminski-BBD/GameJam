@@ -30,6 +30,7 @@ public class Player_Replay : MonoBehaviour
 {
 
     public GameObject player_clone;
+    public Animator animator;
     private GameObject player_instance;
     private player_clone_controller clone_script;
     private int currentFrame = 0;
@@ -44,9 +45,11 @@ public class Player_Replay : MonoBehaviour
     private GameObject child;
     private string currentWeapon;
     private bool clicked = false;
+    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         child = transform.Find("Revolver").gameObject;
         for (int i = 0; i < 2; i++)
         {
@@ -106,7 +109,8 @@ public class Player_Replay : MonoBehaviour
             clones[currentLoop+1].frames.Add(new ReplayActions { 
                 position = transform.position, 
                 rotation = transform.rotation, 
-                isMoving = true,
+                animState = animator.GetCurrentAnimatorStateInfo(0),
+                flipX = spriteRenderer.flipX,
                 weaponPosition = new Vector2(100f,100f),
                 itemRotation = Quaternion.Euler(0f, 0f, 0f),
                 currentWeapon = "none"
@@ -131,7 +135,7 @@ public class Player_Replay : MonoBehaviour
         {
             clones[i].instance.transform.position = clones[i].frames[currentFrame].position;
             clones[i].instance.transform.rotation= clones[i].frames[currentFrame].rotation;
-            clones[i].script.setMove(isMoving);
+            clones[i].script.UpdateAnim(clones[i].frames[currentFrame].animState, clones[i].frames[currentFrame].flipX);
             clones[i].script.HandleWeapon(clones[i].frames[currentFrame].weaponPosition,
                                             clones[i].frames[currentFrame].currentWeapon, 
                                             clones[i].frames[currentFrame].itemRotation);
@@ -167,7 +171,8 @@ public class Player_Replay : MonoBehaviour
             {
                 position = transform.position,
                 rotation = transform.rotation,
-                isMoving = true,
+                animState = animator.GetCurrentAnimatorStateInfo(0),
+                flipX = spriteRenderer.flipX,
                 weaponPosition = weaponPosition,
                 itemRotation = Quaternion.Euler(0f, 0f, 0f),
                 currentWeapon = currentWeapon
@@ -183,7 +188,8 @@ public class Player_Replay : MonoBehaviour
         {
             position = transform.position,
             rotation = transform.rotation,
-            isMoving = true,
+            animState = animator.GetCurrentAnimatorStateInfo(0),
+            flipX = spriteRenderer.flipX,
             weaponPosition = position,
             itemRotation = rotation,
             currentWeapon = currentWeapon

@@ -64,6 +64,6 @@ public class PlacementAreaIndicator : MonoBehaviour
     public void disable()
     {
         isOn = false;
-        Destroy(lineRenderer);
+        lineRenderer.positionCount = 0;
     }
 }

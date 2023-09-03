@@ -13,19 +13,16 @@ public class player_clone_controller : MonoBehaviour
     public float bulletSpeed = 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001f;
     public GameObject slimePrefab;
     public GameObject wallPrefab;
-
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        animator.SetBool("isMoving", isMoving);
-    }
-
-    public void setMove(bool move){
-        isMoving = move;
+       
     }
 
     public void HandleWeapon(Vector2 weaponPosition, string currentWeapon, Quaternion rotation)
@@ -120,5 +117,24 @@ public class player_clone_controller : MonoBehaviour
     void PlaceWall(Vector2 position, Quaternion rotation)
     {
         Instantiate(wallPrefab, position, rotation);
+    }
+
+    public void UpdateAnim(AnimatorStateInfo movement, bool flipX)
+    {
+        spriteRenderer.flipX = flipX;
+
+        if (movement.IsName("player_spawn"))
+        {
+            //do nothing, its entry
+        }
+        else if (movement.IsName("player_idle"))
+        {
+            animator.SetTrigger("idle");
+            animator.SetBool("isMoving", false);
+        }
+        else if (movement.IsName("player_walk"))
+        {
+            animator.SetBool("isMoving", true);
+        }
     }
 }
