@@ -19,11 +19,11 @@ public class WaveSpawner : MonoBehaviour
        while (!gameOverScreen.gameOver) {
             for (int i = 0; i < numberOfEnemies; i++) {
                 GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-                Destroy(enemy, 5f);
-                yield return new WaitForSeconds(1f); // Delay between spawning enemies in a wave.
+                Destroy(enemy, 10f);
+                //yield return new WaitForSeconds(1f); // Delay between spawning enemies in a wave.
             }
             
-            yield return new WaitForSeconds(timeBetweenWaves); // Delay between waves.
+            yield return new WaitForSeconds(10f); // Delay between waves.
        }
     }
 }

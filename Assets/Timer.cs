@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
 
-    public float timerLength = 5.0f; // Length of the timer in seconds
+    public float timerLength = 10.0f; // Length of the timer in seconds
     private float currentTime = 0.0f;
     private bool isTimerRunning = false;
     public Text timeText;
