@@ -19,11 +19,14 @@ public class Grid_System : MonoBehaviour
 
     private Transform playerTransform; // Reference to the player's transform
 
+    public GameObject player;
+    private Player_Replay replay;
+
     void Start()
     {
         numColumns = (int)gridSize.x;
         numRows = (int)gridSize.y;
-
+        replay = player.GetComponent<Player_Replay>();
         // Find the player's transform using a tag or other method
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -59,11 +62,11 @@ public class Grid_System : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0) && distanceToPlayer <= placementRadius)
                 {
-                    Debug.Log("Place wall brudda");
                     float finalRotation = rotationSteps * 45f;
                     GameObject placedItem = Instantiate(itemPrefab, previewPosition, Quaternion.Euler(0f, 0f, finalRotation));
                     Destroy(itemPreview);
                     rotationSteps = 0;
+                    replay.triggerClickWall(previewPosition, Quaternion.Euler(0f, 0f, finalRotation));
                 }
             }
             else
@@ -116,4 +119,6 @@ public class Grid_System : MonoBehaviour
             }
         }
     }
+
+
 }

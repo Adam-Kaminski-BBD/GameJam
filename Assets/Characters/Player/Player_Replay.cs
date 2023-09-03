@@ -30,6 +30,7 @@ public class Player_Replay : MonoBehaviour
 {
 
     public GameObject player_clone;
+    public Animator animator;
     private GameObject player_instance;
     private player_clone_controller clone_script;
     private int currentFrame = 0;
@@ -41,15 +42,15 @@ public class Player_Replay : MonoBehaviour
     private bool isMoving = true;
     private bool loopTrigger = false;
 
-    //bullet
-    public GameObject bulletPrefab;
-    public GameObject firePrefab;
-    public float bulletSpeed = 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001f;
-    public WeaponController weaponController;
-
+    private GameObject child;
+    private string currentWeapon;
+    private bool clicked = false;
+    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        child = transform.Find("Revolver").gameObject;
         for (int i = 0; i < 2; i++)
         {
             player_instance = Instantiate(player_clone);
@@ -102,12 +103,18 @@ public class Player_Replay : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         if (currentLoop+1 < clones.Length) 
         {
             clones[currentLoop+1].frames.Add(new ReplayActions { 
                 position = transform.position, 
                 rotation = transform.rotation, 
-                isMoving = true});
+                animState = animator.GetCurrentAnimatorStateInfo(0),
+                flipX = spriteRenderer.flipX,
+                weaponPosition = new Vector2(100f,100f),
+                itemRotation = Quaternion.Euler(0f, 0f, 0f),
+                currentWeapon = "none"
+            });
         }
         if (currentLoop != -1)
         {
@@ -128,7 +135,10 @@ public class Player_Replay : MonoBehaviour
         {
             clones[i].instance.transform.position = clones[i].frames[currentFrame].position;
             clones[i].instance.transform.rotation= clones[i].frames[currentFrame].rotation;
-            clones[i].script.setMove(isMoving);
+            clones[i].script.UpdateAnim(clones[i].frames[currentFrame].animState, clones[i].frames[currentFrame].flipX, child);
+            clones[i].script.HandleWeapon(clones[i].frames[currentFrame].weaponPosition,
+                                            clones[i].frames[currentFrame].currentWeapon, 
+                                            clones[i].frames[currentFrame].itemRotation);
         }
     }
     
@@ -148,22 +158,41 @@ public class Player_Replay : MonoBehaviour
         loopTrigger = true;
     }
 
-    //used to shoot bullet based on the target position saved.
-    void FireBullet(Vector2 targetPosition)
+    public void triggerClick()
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+        //check the weapon and get data accordingly
+        currentWeapon = child.GetComponent<PlayerAttack>().currentWeapon;
 
-        bullet.transform.rotation = RotateProjectile(direction);
+        if (!currentWeapon.Equals("wall"))
+        {
+            Vector2 weaponPosition = child.GetComponent<PlayerAttack>().lastPositionShot;
 
-        bullet.SetActive(true);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = direction * 1f;
-        Destroy(bullet, 5f);
+            clones[currentLoop + 1].frames.Add(new ReplayActions
+            {
+                position = transform.position,
+                rotation = transform.rotation,
+                animState = animator.GetCurrentAnimatorStateInfo(0),
+                flipX = spriteRenderer.flipX,
+                weaponPosition = weaponPosition,
+                itemRotation = Quaternion.Euler(0f, 0f, 0f),
+                currentWeapon = currentWeapon
+            });
+        }        
     }
-    Quaternion RotateProjectile(Vector2 dir)
+
+    public void triggerClickWall(Vector2 position, Quaternion rotation)
     {
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        return Quaternion.Euler(0, 0, angle);
+        //check the weapon and get data accordingly
+        currentWeapon = child.GetComponent<PlayerAttack>().currentWeapon;
+        clones[currentLoop + 1].frames.Add(new ReplayActions
+        {
+            position = transform.position,
+            rotation = transform.rotation,
+            animState = animator.GetCurrentAnimatorStateInfo(0),
+            flipX = spriteRenderer.flipX,
+            weaponPosition = position,
+            itemRotation = rotation,
+            currentWeapon = currentWeapon
+        });
     }
 }

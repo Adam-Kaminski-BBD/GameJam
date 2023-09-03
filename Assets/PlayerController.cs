@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        StartCoroutine(ChangeAnimationStateAfterDelay());
     }
 
     void Update() 
@@ -37,6 +39,15 @@ public class PlayerController : MonoBehaviour
             GameOverScreen.Setup();
         }
     }
+
+    private IEnumerator ChangeAnimationStateAfterDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        // Change to the new animation state.
+        animator.SetTrigger("idle");
+    }
+
 
     void OnTriggerEnter2D(Collider2D col)
     {

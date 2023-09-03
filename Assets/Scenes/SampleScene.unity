@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -225,6 +225,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &79454381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6636880997925240206, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &79454386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79454381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: ShowTooltip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: HideTooltip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &168175817
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +446,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254756078}
   m_CullTransparentMesh: 1
+--- !u!1 &271927376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1969408934144478744, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &271927381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271927376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: ShowTooltip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: HideTooltip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &287126365
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +507,8 @@ GameObject:
   - component: {fileID: 287126366}
   - component: {fileID: 287126368}
   - component: {fileID: 287126367}
+  - component: {fileID: 287126370}
+  - component: {fileID: 287126369}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -433,7 +535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296.3, y: 205}
+  m_AnchoredPosition: {x: -300, y: 192}
   m_SizeDelta: {x: 52, y: 9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287126367
@@ -531,6 +633,52 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &287126369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287126365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &287126370
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287126365}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &297350956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,6 +1412,56 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &396389478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4754999004793091955, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &396389483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396389478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: ShowTooltip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: HideTooltip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &397907178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1473,8 @@ GameObject:
   - component: {fileID: 397907179}
   - component: {fileID: 397907181}
   - component: {fileID: 397907180}
+  - component: {fileID: 397907183}
+  - component: {fileID: 397907182}
   m_Layer: 5
   m_Name: FillMeter
   m_TagString: Untagged
@@ -1339,6 +1539,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397907178}
   m_CullTransparentMesh: 1
+--- !u!114 &397907182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397907178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &397907183
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397907178}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &489782458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1511,7 +1757,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 1.105
+  orthographic size: 0.9025
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1566,6 +1812,11 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &524315756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5393724441950403576, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &548061701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,10 +1927,6 @@ PrefabInstance:
     - target: {fileID: 7053505847029840180, guid: 78829a56c43e33544b97e3b585b3a661, type: 3}
       propertyPath: m_Name
       value: PlacementIndicator
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381892967890547609, guid: 78829a56c43e33544b97e3b585b3a661, type: 3}
-      propertyPath: segments
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1908,6 +2155,56 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11ce42ee1a4af8b4684e14219096e549, type: 3}
+--- !u!1 &685353624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 668461894805215167, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+  m_PrefabInstance: {fileID: 8672808216901806899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &685353629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685353624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: ShowTooltip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3025884578921190311}
+          m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
+          m_MethodName: HideTooltip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &711020398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1984,6 +2281,7 @@ GameObject:
   - component: {fileID: 748204204}
   - component: {fileID: 748204203}
   - component: {fileID: 748204200}
+  - component: {fileID: 748204205}
   m_Layer: 0
   m_Name: Text_Timer
   m_TagString: Untagged
@@ -2043,6 +2341,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &748204205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748204199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!1001 &819668345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2119,6 +2440,8 @@ GameObject:
   - component: {fileID: 827745908}
   - component: {fileID: 827745910}
   - component: {fileID: 827745909}
+  - component: {fileID: 827745912}
+  - component: {fileID: 827745911}
   m_Layer: 5
   m_Name: Heart
   m_TagString: Untagged
@@ -2183,6 +2506,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827745907}
   m_CullTransparentMesh: 1
+--- !u!114 &827745911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827745907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &827745912
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827745907}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &887507272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,7 +2600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2438,7 +2807,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
   m_PrefabInstance: {fileID: 8672808216901806899}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 524315756}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee9c5518e2f72a343a62bfab2c4303b2, type: 3}
@@ -3613,14 +3982,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5176471}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0a089b6fa72d4b94baa6712504babaa3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3910,7 +4279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d430954ecef40ac40a794156198d7567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerLength: 100
+  timerLength: 5
   timeText: {fileID: 2007471033}
   targetPrefab: {fileID: 1786066951}
   menuController: {fileID: 1218847680}
@@ -3960,7 +4329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 317.2, y: 187.3}
+  m_AnchoredPosition: {x: 320.2, y: 187.3}
   m_SizeDelta: {x: 160.91, y: 50.0316}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2007471031
@@ -7585,6 +7954,8 @@ GameObject:
   - component: {fileID: 2113352496}
   - component: {fileID: 2113352498}
   - component: {fileID: 2113352497}
+  - component: {fileID: 2113352500}
+  - component: {fileID: 2113352499}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -7649,6 +8020,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113352495}
   m_CullTransparentMesh: 1
+--- !u!114 &2113352499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113352495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2113352500
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113352495}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &2114585920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7659,11 +8076,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2214026178878185352, guid: 2f5489422373f1f40b7891efca7a9527, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.77
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 2214026178878185352, guid: 2f5489422373f1f40b7891efca7a9527, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.96
+      value: -1.09
       objectReference: {fileID: 0}
     - target: {fileID: 2214026178878185352, guid: 2f5489422373f1f40b7891efca7a9527, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7701,22 +8118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Place_Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 4993153208351813247, guid: 2f5489422373f1f40b7891efca7a9527, type: 3}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 6293649241170157216, guid: 2f5489422373f1f40b7891efca7a9527, type: 3}
-      propertyPath: isOn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293649241170157216, guid: 2f5489422373f1f40b7891efca7a9527, type: 3}
-      propertyPath: placementRadius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293649241170157216, guid: 2f5489422373f1f40b7891efca7a9527, type: 3}
-      propertyPath: placementGridPrefab
+      propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1786066951}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7730,30 +8135,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2435032190859575631, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_Parameters.textureMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2435032190859575631, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2435032190859575631, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2435032190859575631, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 129970079752044750, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1330760633833075979, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 4532478465904174238, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      propertyPath: menuCanvas
+      value: 
+      objectReference: {fileID: 524315756}
+    - target: {fileID: 4532478465904174238, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      propertyPath: slimePrefab
+      value: 
+      objectReference: {fileID: 434258025152130361, guid: f7d837b73a0e8104db06c30de39f9d84, type: 3}
     - target: {fileID: 4532478465904174238, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: wallPreview
       value: 
@@ -7762,14 +8155,6 @@ PrefabInstance:
       propertyPath: gridController
       value: 
       objectReference: {fileID: 595347002}
-    - target: {fileID: 4532478465904174238, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: menuController
-      value: 
-      objectReference: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-    - target: {fileID: 4532478465904174238, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: weaponController
-      value: 
-      objectReference: {fileID: 6875551496827713876, guid: f2bf6615a28599847a3709291b778723, type: 3}
     - target: {fileID: 4532975880294478440, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7811,17 +8196,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5378900467635392599, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: playerClone
-      value: 
-      objectReference: {fileID: 2715338118445146549, guid: 06eeeedd03709d14d8404ab2e200d640, type: 3}
-    - target: {fileID: 5378900467635392599, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: player_clone
-      value: 
-      objectReference: {fileID: 2715338118445146549, guid: 06eeeedd03709d14d8404ab2e200d640, type: 3}
-    - target: {fileID: 6585773395312018761, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1786066957}
+    - target: {fileID: 6585773395312018761, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 6653049447991060927, guid: 53d840955351c9747adb3b0283c16f69, type: 3}
     - target: {fileID: 6585773395312018761, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
       propertyPath: healthBar
       value: 
@@ -7830,17 +8211,7 @@ PrefabInstance:
       propertyPath: GameOverScreen
       value: 
       objectReference: {fileID: 168175819}
-    - target: {fileID: 6585773395312018761, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: collisionOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8175554844492825890, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2857033751204279329, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-    - {fileID: 7273908063821386673, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7913,6 +8284,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e6dc51b5f9144478928942b78b1ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &3025884578921190310
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.040933575
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.026698308
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.987427
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221036371322586577, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046479929843467886, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+      propertyPath: m_Name
+      value: ToolTipManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+--- !u!114 &3025884578921190311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3966675656727021767, guid: ab7ba5700b228d344a2dd5ac9f077087, type: 3}
+  m_PrefabInstance: {fileID: 3025884578921190310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3073b6950ab92941976aff460b7e0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8672808216901806899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7921,18 +8360,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 255168188640765811, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-    - target: {fileID: 255168188640765811, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetWeapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 255168188640765811, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuController, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 1875474673389349575, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8015,68 +8442,176 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 6875551496827713876, guid: f2bf6615a28599847a3709291b778723, type: 3}
+      objectReference: {fileID: 3025884578921190311}
     - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: setWeapon
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HideTooltip
       objectReference: {fileID: 0}
     - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: WeaponController, Assembly-CSharp
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TooltipManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: '"pistol"'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3203736495920740360, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: weaponController
       value: 
       objectReference: {fileID: 2329079455997349025}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 3025884578921190311}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HideTooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TooltipManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378117916280091669, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1218847680}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6875551496827713876, guid: f2bf6615a28599847a3709291b778723, type: 3}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 3025884578921190311}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HideTooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: WeaponController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TooltipManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102129780893348598, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5393724441950403576, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_Name
       value: menu-ui-canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5393724441950403576, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9103744882847113139, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_Mass
-      value: 100
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 3025884578921190311}
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 9103744882847113139, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_BodyType
-      value: 0
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HideTooltip
       objectReference: {fileID: 0}
-    - target: {fileID: 9103744882847113139, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_Constraints
-      value: 4
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TooltipManager, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 9103744882847113139, guid: 2f4c7dead972d594eab2fef57067043a, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
+    - target: {fileID: 7730640218729453607, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1969408934144478744, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 271927381}
+    - targetCorrespondingSourceObject: {fileID: 6636880997925240206, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 79454386}
+    - targetCorrespondingSourceObject: {fileID: 668461894805215167, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685353629}
+    - targetCorrespondingSourceObject: {fileID: 4754999004793091955, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 396389483}
   m_SourcePrefab: {fileID: 100100000, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
 --- !u!1001 &8892699869175703480
 PrefabInstance:
@@ -8169,3 +8704,4 @@ SceneRoots:
   - {fileID: 8672808216901806899}
   - {fileID: 2114585920}
   - {fileID: 568784594}
+  - {fileID: 3025884578921190310}

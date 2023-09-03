@@ -21,7 +21,7 @@ public class WeaponController : MonoBehaviour
 
     public void setWeapon(string weapon)
     {
-        Debug.Log("set a weapon" + weapon);
+        //Debug.Log("set a weapon" + weapon);
         string sanitized = weapon.Replace("\"", "");
         Weapon = sanitized;
     }

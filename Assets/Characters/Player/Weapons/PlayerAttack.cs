@@ -9,8 +9,9 @@ public class PlayerAttack : MonoBehaviour
     public GameObject firePrefab;
     public GameObject slimePrefab;
 
-    public MenuController menuController;
+    private MenuController menuController;
     public GameObject menuCanvas;
+    private bool menuShown = true;
 
     public Animator bulletAnimator;
 
@@ -18,16 +19,24 @@ public class PlayerAttack : MonoBehaviour
 
     public GameObject gridController;
     public GameObject wallPreview;
+    public string currentWeapon;
+
+    private Player_Replay replay;
 
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
+        replay = GetComponentInParent<Player_Replay>();
+        menuController = menuCanvas.GetComponent<MenuController>();
     }
 
     void Update()
     {
+        menuShown = menuController.isActive;
         Vector2 playerPosition = transform.position;
+        //bad code ik, but we don't need to refactor for a gamejam
+        currentWeapon = weaponController.getWeapon();
         string isWall = weaponController.getWeapon();
         if (isWall == "wall")
         {
@@ -37,46 +46,44 @@ public class PlayerAttack : MonoBehaviour
         {
             removeWall();
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !menuShown)
         {
             Vector2 mouseClickPosScreen = Input.mousePosition;
             Vector2 mouseClickPosWorld = Camera.main.ScreenToWorldPoint(mouseClickPosScreen);
             lastPositionShot = mouseClickPosWorld;
             GetSetDistance(playerPosition, mouseClickPosWorld);
             HandleAttack(mouseClickPosWorld);
+            replay.triggerClick();
         }
-        lastPositionShot = new Vector2(0,0);
+        
     }
 
     void HandleAttack(Vector2 targetPosition)
     {
-        removeWall();
         string bang = weaponController.getWeapon();
         switch (bang)
         { 
             case "fire":
-                Debug.Log("fire attack");
-               
+                removeWall();
                 SprayFire(targetPosition);
                 break;
 
             case "pistol":
-                
+                removeWall();
                 FireBullet(targetPosition);
                 break;
 
             case "slime":
+                removeWall();
                 GooiSlime(targetPosition);
-                Debug.Log("Slime attack");
                 break;
 
             case "wall":
                 placeWall();
-                Debug.Log("Wall attack");
                 break;
 
             default:
-                
+                removeWall();
                 Debug.Log("NOT FIRE OR PISTOL");
                 return;
         }

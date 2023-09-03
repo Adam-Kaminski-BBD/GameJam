@@ -8,5 +8,11 @@ public class ReplayActions
     public Vector3 position;
     public Quaternion rotation;
 
-    public bool isMoving;
+    public AnimatorStateInfo animState;
+    public bool flipX;
+    
+    public Vector2 weaponPosition;
+    public Quaternion itemRotation;
+    public string currentWeapon;
+    public bool clicked;
 }

@@ -36,6 +36,7 @@ public class Timer : MonoBehaviour
                 if (effectScript != null)
                 {
                     // There should be a pause and another countdown so that the player can understand whats going on.
+                    DestroyBullets();
                     effectScript.TriggerEffect();
                     ResetTimer();
                     if (!gameOverScreen.gameOver)
@@ -58,6 +59,8 @@ public class Timer : MonoBehaviour
 
     public void ResetTimer()
     {
+        //TODO
+        //Destroy all elements with the "Bullet Tag"
         currentTime = timerLength;
         isTimerRunning = false;
     }
@@ -65,6 +68,26 @@ public class Timer : MonoBehaviour
     void DisplayTime(float timeToDisplay)
     {
         timeText.text = string.Format("{0}: {1:00}","LOOP IN", timeToDisplay);
+    }
+
+    void DestroyBullets()
+    {
+        GameObject[] prefabsBullet = GameObject.FindGameObjectsWithTag("Bullet");
+        GameObject[] prefabsWalls = GameObject.FindGameObjectsWithTag("Wall_Placed");
+        GameObject[] prefabsSlime = GameObject.FindGameObjectsWithTag("Slime");
+
+        foreach(GameObject prefab in prefabsBullet)
+        {
+            Destroy(prefab);
+        }
+        foreach (GameObject prefab in prefabsWalls)
+        {
+            Destroy(prefab);
+        }
+        foreach (GameObject prefab in prefabsSlime)
+        {
+            Destroy(prefab);
+        }
     }
 }
 
