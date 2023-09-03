@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     void Update() 
     {
-        if(currentHealth == 0) {
+        if(currentHealth <= 0) {
             GameOverScreen.Setup();
         }
     }

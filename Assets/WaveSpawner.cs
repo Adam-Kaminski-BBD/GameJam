@@ -15,9 +15,11 @@ public class WaveSpawner : MonoBehaviour
     }
 
     private IEnumerator SpawnWaves() {
+        Debug.Log("Game start");
        while (!gameOverScreen.gameOver) {
             for (int i = 0; i < numberOfEnemies; i++) {
-                Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+                GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+                Destroy(enemy, 5f);
                 yield return new WaitForSeconds(1f); // Delay between spawning enemies in a wave.
             }
             
