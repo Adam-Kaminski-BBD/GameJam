@@ -71,7 +71,7 @@ public class EnemyDamage : MonoBehaviour
 
     private IEnumerator DestroyAfterAnimation()
     {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.68f);
 
         // Destroy the GameObject
         Destroy(gameObject);
