@@ -63,6 +63,8 @@ public class Timer : MonoBehaviour
         //Destroy all elements with the "Bullet Tag"
         currentTime = timerLength;
         isTimerRunning = false;
+        PlayerController health = targetPrefab.GetComponent<PlayerController>();
+        health.ResetHealth();
     }
 
     void DisplayTime(float timeToDisplay)

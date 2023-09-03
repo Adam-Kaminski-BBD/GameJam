@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 /*
@@ -38,7 +39,7 @@ public class Player_Replay : MonoBehaviour
     private int currentLoop = -1;
     //Starting with 5 by default
     // 5 clones, each with 1 replay list 
-    private clone_data[] clones = new clone_data[2];
+    private clone_data[] clones = new clone_data[10];
     private bool isMoving = true;
     private bool loopTrigger = false;
 
@@ -51,7 +52,7 @@ public class Player_Replay : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         child = transform.Find("Revolver").gameObject;
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 10; i++)
         {
             player_instance = Instantiate(player_clone);
             player_instance.SetActive(false);
@@ -81,7 +82,11 @@ public class Player_Replay : MonoBehaviour
                     currentLoop++;
                     resetClones();
                 }
-            }            
+            }
+            else
+            {
+                SceneManager.LoadScene("Complete");
+            }     
             //reset current frame every reset
             currentFrame = 0;
         }
@@ -125,6 +130,10 @@ public class Player_Replay : MonoBehaviour
             {
                 currentFrame = 0;
             }
+        }
+        if (currentLoop >= clones.Length)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
             

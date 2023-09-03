@@ -127,6 +127,12 @@ public class PlayerController : MonoBehaviour
         movementInput = movementValue.Get<Vector2>();
     }
 
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth);
+    }
+
     private void ClampPosition()
     {
         Vector3 newPosition = transform.position;

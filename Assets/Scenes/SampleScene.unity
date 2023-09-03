@@ -2082,7 +2082,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 1.05
+  orthographic size: 1.0425
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9029,6 +9029,16 @@ PrefabInstance:
     - target: {fileID: 1875474673389349575, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016015031962482887, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_text
+      value: 'Pick an item to use for the next loop!
+
+        Survive! Until it crashes...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016015031962482887, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
+      propertyPath: m_margin.w
+      value: -149.81488
       objectReference: {fileID: 0}
     - target: {fileID: 2587930408280242025, guid: bcc23a76adb91c94bbe9d9f305772083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

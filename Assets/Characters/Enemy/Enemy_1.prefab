@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd980a80b82c9246a44f06b1d3aded6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.45
   movementFilter:
     useTriggers: 0
     useLayerMask: 0

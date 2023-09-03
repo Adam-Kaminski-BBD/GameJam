@@ -9,4 +9,9 @@ public class MenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
