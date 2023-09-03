@@ -119,10 +119,11 @@ public class player_clone_controller : MonoBehaviour
         Instantiate(wallPrefab, position, rotation);
     }
 
-    public void UpdateAnim(AnimatorStateInfo movement, bool flipX)
+    public void UpdateAnim(AnimatorStateInfo movement, bool flipX, GameObject revolver)
     {
         spriteRenderer.flipX = flipX;
-
+        GameObject child = transform.Find("Revolver").gameObject;
+        child.GetComponent<SpriteRenderer>().flipX = flipX;
         if (movement.IsName("player_spawn"))
         {
             //do nothing, its entry

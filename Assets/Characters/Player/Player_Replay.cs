@@ -135,7 +135,7 @@ public class Player_Replay : MonoBehaviour
         {
             clones[i].instance.transform.position = clones[i].frames[currentFrame].position;
             clones[i].instance.transform.rotation= clones[i].frames[currentFrame].rotation;
-            clones[i].script.UpdateAnim(clones[i].frames[currentFrame].animState, clones[i].frames[currentFrame].flipX);
+            clones[i].script.UpdateAnim(clones[i].frames[currentFrame].animState, clones[i].frames[currentFrame].flipX, child);
             clones[i].script.HandleWeapon(clones[i].frames[currentFrame].weaponPosition,
                                             clones[i].frames[currentFrame].currentWeapon, 
                                             clones[i].frames[currentFrame].itemRotation);
