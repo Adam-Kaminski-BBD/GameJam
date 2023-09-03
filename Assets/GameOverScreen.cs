@@ -14,6 +14,7 @@ public class GameOverScreen : MonoBehaviour
         MenuController.Disable();
         gameObject.SetActive(true);
         gameOver = true;
+        Time.timeScale = 0;
     }
 
     public void RestartButton() {
